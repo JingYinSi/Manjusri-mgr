@@ -7,6 +7,7 @@ const path = require('path'),
     graph = require('./server/flow'),
     transitionsGraph = finelets.rests.baseTransitionGraph(graph, resourceRegistry),
     connectDb = finelets.db.mongoDb.connectMongoDb,
+    sessionStore = finelets.session.mongoDb(1000 * 60 * 60), // set session for 1 hour
     appBuilder = finelets.express.appBuilder;
 
 var log4js = require('log4js');
@@ -39,6 +40,8 @@ var app = function () {
         .setViewEngine(viewEngineFactory)
         .setResources(resourceRegistry, resourceDescriptors)
         .setWebRoot('/website', './client/public')
+        .setFavicon('client/public/images/favicon.jpg')
+        .setSessionStore(sessionStore)
         .end();
 
     connectDb(function () {
