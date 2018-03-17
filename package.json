@@ -1,0 +1,19 @@
+{
+  "name": "manjusri-mgr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JingYinSi/Manjusri-mgr.git"
+  },
+  "author": "JingYin Temple",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JingYinSi/Manjusri-mgr/issues"
+  },
+  "homepage": "https://github.com/JingYinSi/Manjusri-mgr#readme"
+}
