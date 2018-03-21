@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tex Trade</title>
+    <title>Pomodoro</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-hello world!
+<div id="app">
+    <hello-component></hello-component>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script type="text/javascript">
+    //creating component
+    var HelloComponent = Vue.extend({
+        template: '<h1>Hello</h1>'
+    });
+    //registering component
+    Vue.component('hello-component', HelloComponent);
+    //initializing the Vue application
+    new Vue({
+        el: '#app'
+    });
+</script>
 </body>
 </html>
